@@ -1,0 +1,54 @@
+html, body {
+    width: 100vw;
+    min-height: 100vh;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(8, auto);
+    grid-gap: 15px;
+    grid-template-areas: "head" "sec1" "sec2" "sec3" "sec4" "sec5" "sec6" "foot";
+    padding: 20px;
+    background-color: #000;
+}
+header {grid-area: "head"}
+
+#h1 {grid-area: "sec1"}
+#h2 {grid-area: "sec2"}
+#h3 {grid-area: "sec3"}
+#h4 {grid-area: "sec4"}
+#h5 {grid-area: "sec5"}
+#h6 {grid-area: "sec6"}
+
+footer {grid-area: "foot"}
+
+header, div, footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #FFF; }
+
+    h1, p {text-align: center;}
+
+    div {font-size: 250%}
+
+
+    @media screen and (min-width: 768px) {
+        
+        body{font-size: 24px;
+        display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: align;
+    grid-template-areas: "sec1" "sec2" "sec3" "sec4" "sec5" "sec6"}
